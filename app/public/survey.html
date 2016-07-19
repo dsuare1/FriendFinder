@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FriendFinder :: Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="text-center">
+        <h1>Welcome to the Friend Finder Survey!</h1>
+    </div>
+    <div class="container survey-content">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h4>Tell us your name and upload your photo so other Friend Finders can see you when there's a match!</h4>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Link to your photo</label>
+                            <input type="text" class="form-control" id="photo" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <h4>Question 1</h4>
+                <p>I enjoy spending time at home, cooking a good meal and having a glass of wine.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 2</h4>
+                <p>I enjoy being outdoors, experiencing nature through hiking, camping, or swimming holes.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 3</h4>
+                <p>I have trouble maintaining an even disposition when things are tough.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 4</h4>
+                <p>I rarely have enough time in the day to accomplish the things I want to get done.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 5</h4>
+                <p>I enjoy traveling and prioritize exploring new places over owning things.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 6</h4>
+                <p>I never meet a stranger; I thrive in social situations and have not problem initiating conversation with someone I've never met.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 7</h4>
+                <p>Being active is very important to me. I exercise at least three times a week, usually more.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 8</h4>
+                <p>I enjoy watching television and am always on the lookout for a new movie or show.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 9</h4>
+                <p>I'm a foodie and I don't mind spending money for a fancy dinner.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+                <h4>Question 10</h4>
+                <p>I am passionate about politics and social justice and I regularly keep up with political news.</p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
+                        Select an Option
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
+                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
+                        <li><a data-value="4">4</a></li>
+                        <li><a data-value="3">3</a></li>
+                        <li><a data-value="2">2</a></li>
+                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center home-button">
+        <a href="/">
+            <button type="button" class="btn btn-md btn-primary">
+                <p><i class="fa fa-home"></i>Home</p>
+            </button>
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(".dropdown-menu li a").on("click", function() {
+        $(this).parents(".dropdown").find(".btn").html($(this).text() + " <span class='caret'></span>");
+        $(this).parents(".dropdown").find('#agree-scale').val($(this).data("value"));
+        console.log($("#agree-scale").val());
+    });
+    </script>
+</body>
+
+</html>
