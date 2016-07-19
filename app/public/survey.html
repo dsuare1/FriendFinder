@@ -4,6 +4,7 @@
 <head>
     <title>FriendFinder :: Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -32,156 +33,113 @@
             <div class="col-md-8 col-md-offset-2">
                 <h4>Question 1</h4>
                 <p>I enjoy spending time at home, cooking a good meal and having a glass of wine.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q1">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 2</h4>
                 <p>I enjoy being outdoors, experiencing nature through hiking, camping, or swimming holes.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q2">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 3</h4>
                 <p>I have trouble maintaining an even disposition when things are tough.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
-                <h4>Question 4</h4>
+                <select id="q3">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
+                <!-- <h4>Question 4</h4>
                 <p>I rarely have enough time in the day to accomplish the things I want to get done.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q4">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 5</h4>
                 <p>I enjoy traveling and prioritize exploring new places over owning things.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q5">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 6</h4>
                 <p>I never meet a stranger; I thrive in social situations and have not problem initiating conversation with someone I've never met.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q6">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 7</h4>
                 <p>Being active is very important to me. I exercise at least three times a week, usually more.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q7">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 8</h4>
                 <p>I enjoy watching television and am always on the lookout for a new movie or show.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q8">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 9</h4>
                 <p>I'm a foodie and I don't mind spending money for a fancy dinner.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q9">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select>
                 <h4>Question 10</h4>
                 <p>I am passionate about politics and social justice and I regularly keep up with political news.</p>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="agree-scale" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:200px;">
-                        Select an Option
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="agree-scale">
-                        <li><a data-value="5">5 <span>(strongly agree)</span></a></li>
-                        <li><a data-value="4">4</a></li>
-                        <li><a data-value="3">3</a></li>
-                        <li><a data-value="2">2</a></li>
-                        <li><a data-value="1">1 <span>(strongly disagree)</span></a></li>
-                    </ul>
-                </div>
+                <select id="q10">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                </select> -->
             </div>
         </div>
+    </div>
+    <div class="text-center submit-button">
+        <a href="#">
+            <button type="button" class="btn btn-lg btn-success" id="submit">
+                <p><i class="fa fa-check-square"></i>Submit Answers</p>
+            </button>
+        </a>
     </div>
     <div class="text-center home-button">
         <a href="/">
@@ -190,13 +148,35 @@
             </button>
         </a>
     </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    $(".dropdown-menu li a").on("click", function() {
-        $(this).parents(".dropdown").find(".btn").html($(this).text() + " <span class='caret'></span>");
-        $(this).parents(".dropdown").find('#agree-scale').val($(this).data("value"));
-        console.log($("#agree-scale").val());
+    $("#submit").on("click", function(e) {
+        e.preventDefault();
+        var newUser = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        }
+
+        $.post("http://localhost:8080/api/friends", newUser)
+        	.done(function(data) {
+            	console.log(data);
+        });
+
+        $("#name").val("");
+        $("#photo").val("");
+        $("#q1").val("");
+        $("#q2").val("");
+        $("#q3").val("");
+        $("#q4").val("");
+        $("#q5").val("");
+        $("#q6").val("");
+        $("#q7").val("");
+        $("#q8").val("");
+        $("#q9").val("");
+        $("#q10").val("");
+        $("#name").focus();
     });
     </script>
 </body>
