@@ -54,13 +54,8 @@ app.post("/api/friends", function(req, res) {
         var curUserIndex = 1;
         var totDiffs = [];
         while (curUserIndex < users.length) {
-        	var totalDifference = 0;
+            var totalDifference = 0;
             for (var i = 0; i < newUser.scores.length; i++) {
-                // if ((parseInt(users[curUserIndex].scores[i]) - parseInt(newUser.scores[i])) < 0) {
-                //     totalDifference += (parseInt(users[curUserIndex].scores[i]) - parseInt(newUser.scores[i]) * -1);
-                // } else {
-                //     totalDifference += parseInt(users[curUserIndex].scores[i]) - parseInt(newUser.scores[i]);
-                // }
                 totalDifference += Math.abs(parseInt(users[curUserIndex].scores[i]) - parseInt(newUser.scores[i]));
             }
             totDiffs.push(totalDifference);
@@ -68,6 +63,21 @@ app.post("/api/friends", function(req, res) {
         }
         console.log("totDiffs: " + totDiffs);
 
+        // trying to select the lowest value from the 'totDiffs' array; doesn't
+        for (var i = 0; i < totDiffs.length; i++) {
+            var lowest = totDiffs[0];
+            if (totDiffs[i] < lowest) {
+                lowest = totDiffs[i];
+            }
+        }
+        console.log("index of lowest: " + totDiffs.indexOf(lowest));
+        var bestMatch = totDiffs.indexOf(lowest);
+        match.push(users[bestMatch]);
+
+        for (var i = 0; i < match.length; i++) {
+        	console.log("newUser: " + match[0].name);
+        	console.log("newUser's best match: " + match[1].name);
+        }
     }
     // newUser.scores[0] - users[0].scores[0];
     // newUser.scores[1] - users[0].scores[1];

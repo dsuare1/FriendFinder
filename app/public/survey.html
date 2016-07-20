@@ -33,7 +33,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h4>Question 1</h4>
                 <p>I enjoy spending time at home, cooking a good meal and having a glass of wine.</p>
-                <select id="q1">
+                <select id="q1" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -43,7 +43,7 @@
                 </select>
                 <h4>Question 2</h4>
                 <p>I enjoy being outdoors, experiencing nature through hiking, camping, or swimming holes.</p>
-                <select id="q2">
+                <select id="q2" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -53,7 +53,7 @@
                 </select>
                 <h4>Question 3</h4>
                 <p>I have trouble maintaining an even disposition when things are tough.</p>
-                <select id="q3">
+                <select id="q3" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -63,7 +63,7 @@
                 </select>
                 <!-- <h4>Question 4</h4>
                 <p>I rarely have enough time in the day to accomplish the things I want to get done.</p>
-                <select id="q4">
+                <select id="q4" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -73,7 +73,7 @@
                 </select>
                 <h4>Question 5</h4>
                 <p>I enjoy traveling and prioritize exploring new places over owning things.</p>
-                <select id="q5">
+                <select id="q5" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -83,7 +83,7 @@
                 </select>
                 <h4>Question 6</h4>
                 <p>I never meet a stranger; I thrive in social situations and have not problem initiating conversation with someone I've never met.</p>
-                <select id="q6">
+                <select id="q6" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -93,7 +93,7 @@
                 </select>
                 <h4>Question 7</h4>
                 <p>Being active is very important to me. I exercise at least three times a week, usually more.</p>
-                <select id="q7">
+                <select id="q7" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -103,7 +103,7 @@
                 </select>
                 <h4>Question 8</h4>
                 <p>I enjoy watching television and am always on the lookout for a new movie or show.</p>
-                <select id="q8">
+                <select id="q8" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -113,7 +113,7 @@
                 </select>
                 <h4>Question 9</h4>
                 <p>I'm a foodie and I don't mind spending money for a fancy dinner.</p>
-                <select id="q9">
+                <select id="q9" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -123,7 +123,7 @@
                 </select>
                 <h4>Question 10</h4>
                 <p>I am passionate about politics and social justice and I regularly keep up with political news.</p>
-                <select id="q10">
+                <select id="q10" class="q">
                     <option value="" disabled selected>Select an option</option>
                     <option value="5">5 (Strongly Agree)</option>
                     <option value="4">4</option>
@@ -166,16 +166,17 @@
 
         $("#name").val("");
         $("#photo").val("");
-        $("#q1").val("");
-        $("#q2").val("");
-        $("#q3").val("");
-        $("#q4").val("");
-        $("#q5").val("");
-        $("#q6").val("");
-        $("#q7").val("");
-        $("#q8").val("");
-        $("#q9").val("");
-        $("#q10").val("");
+        $(".q").val("");
+        // $("#q1").val("");
+        // $("#q2").val("");
+        // $("#q3").val("");
+        // $("#q4").val("");
+        // $("#q5").val("");
+        // $("#q6").val("");
+        // $("#q7").val("");
+        // $("#q8").val("");
+        // $("#q9").val("");
+        // $("#q10").val("");
         $("#name").focus();
     });
     </script>
