@@ -1,6 +1,10 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
+var htmlRoutes = require("./app/routing/html-routes.js");
+var apiRoutes = require("./app/routing/api-routes.js");
+var friends = require("./app/data/friends.js");
+// var apiRoutes = require("./app/routing/api-routes2.js");
 
 var app = express();
 var PORT = 8080;
@@ -10,92 +14,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-// used to serve the static files (style.css, imgs, etc.)
-app.use("/assets", express.static(__dirname + "/assets"));
-
-// array to store all users
-var users = [];
+// // used to serve the static files (style.css, imgs, etc.)
+// app.use("/assets", express.static(__dirname + "/assets"));
 
 // ****************************************************
-// html view routing (needs to be in file 'html-routes.js')
+// html view routing
 // ****************************************************
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-});
+var html = new htmlRoutes();
+var api = new apiRoutes();
 
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-});
-// ****************************************************
+html.home(app, path);
+html.survey(app, path);
 
-
-
-// ****************************************************
-// api routing (needs to be in file 'api-routes.js')
-// ****************************************************
-app.get("/api/friends", function(req, res) {
-    res.json(users);
-});
-
-app.post("/api/friends", function(req, res) {
-    var newUser = req.body;
-    users.unshift(newUser);
-    console.log(users);
-
-    // compare newUser's answers array (newUser.scores) with each other user's scores array (users[i].scores)
-    var match = [];
-    match.push(newUser);
-    // var totalDifference = 0;
-    if (users.length < 2) {
-        console.log("unable to do calculation; not enough users");
-    } else {
-        // var diff = Math.abs(parseInt(newUser.scores[0]) - parseInt(users[1].scores[0]));
-
-        var curUserIndex = 1;
-        var totDiffs = [];
-        while (curUserIndex < users.length) {
-            var totalDifference = 0;
-            for (var i = 0; i < newUser.scores.length; i++) {
-                totalDifference += Math.abs(parseInt(users[curUserIndex].scores[i]) - parseInt(newUser.scores[i]));
-            }
-            totDiffs.push(totalDifference);
-            curUserIndex++;
-        }
-        console.log("totDiffs: " + totDiffs);
-
-        // trying to select the lowest value from the 'totDiffs' array; doesn't
-        for (var i = 0; i < totDiffs.length; i++) {
-            var lowest = totDiffs[0];
-            if (totDiffs[i] < lowest) {
-                lowest = totDiffs[i];
-            }
-        }
-        console.log("index of lowest: " + totDiffs.indexOf(lowest));
-        var bestMatch = totDiffs.indexOf(lowest);
-        match.push(users[bestMatch]);
-
-        for (var i = 0; i < match.length; i++) {
-        	console.log("newUser: " + match[0].name);
-        	console.log("newUser's best match: " + match[1].name);
-        }
-    }
-    // newUser.scores[0] - users[0].scores[0];
-    // newUser.scores[1] - users[0].scores[1];
-    // newUser.scores[2] - users[0].scores[2];
-    // newUser.scores[3] - users[0].scores[3];
-    // newUser.scores[4] - users[0].scores[4];
-    // newUser.scores[5] - users[0].scores[5];
-    // newUser.scores[6] - users[0].scores[6];
-    // newUser.scores[7] - users[0].scores[7];
-    // newUser.scores[8] - users[0].scores[8];
-    // newUser.scores[9] - users[0].scores[9];
-
-});
-
-// ****************************************************
+// // ****************************************************
+// // api routing
+// // ****************************************************
+api.jsonFriends(app, friends);
+api.postUser(app, friends);
 
 app.listen(PORT, function() {
     console.log("server listening on port: " + PORT);
 });
-
-exports.app = app;

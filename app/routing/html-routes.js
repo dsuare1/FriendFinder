@@ -1,13 +1,14 @@
-// var app = require("./../../server.js");
+var html = function() {
+    this.home = function(app, path) {
+        app.get("/", function(req, res) {
+            res.sendFile(path.join(__dirname, "../public/home.html"));
+        });
+    },
+    this.survey = function(app, path) {
+        app.get("/survey", function(req, res) {
+            res.sendFile(path.join(__dirname, "../public/survey.html"));
+        });
+    }
+}
 
-// // ****************************************************
-// // html view routing (needs to be in file 'html-routes.js')
-// // ****************************************************
-// app.get("/", function(req, res) {
-// 	res.sendFile(path.join(__dirname, "app/public/home.html"));
-// });
-
-// app.get("/survey", function(req, res) {
-// 	res.sendFile(path.join(__dirname, "app/public/survey.html"));
-// });
-// // ****************************************************
+module.exports = html;

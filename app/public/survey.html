@@ -61,7 +61,7 @@
                     <option value="2">2</option>
                     <option value="1">1 (Strongly Disagree)</option>
                 </select>
-                <!-- <h4>Question 4</h4>
+                <h4>Question 4</h4>
                 <p>I rarely have enough time in the day to accomplish the things I want to get done.</p>
                 <select id="q4" class="q">
                     <option value="" disabled selected>Select an option</option>
@@ -130,7 +130,7 @@
                     <option value="3">3</option>
                     <option value="2">2</option>
                     <option value="1">1 (Strongly Disagree)</option>
-                </select> -->
+                </select>
             </div>
         </div>
     </div>
@@ -151,32 +151,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    $("#submit").on("click", function(e) {
-        e.preventDefault();
+    $("#submit").on("click", function() {
         var newUser = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
             scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
         }
 
-        $.post("http://localhost:8080/api/friends", newUser)
-        	.done(function(data) {
+        $.post("http://localhost:8080/api/friends", newUser).done(function(data) {
             	console.log(data);
         });
 
         $("#name").val("");
         $("#photo").val("");
-        $(".q").val("");
-        // $("#q1").val("");
-        // $("#q2").val("");
-        // $("#q3").val("");
-        // $("#q4").val("");
-        // $("#q5").val("");
-        // $("#q6").val("");
-        // $("#q7").val("");
-        // $("#q8").val("");
-        // $("#q9").val("");
-        // $("#q10").val("");
+        // $(".q").val("");
         $("#name").focus();
     });
     </script>
