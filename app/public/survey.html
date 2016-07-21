@@ -136,7 +136,7 @@
     </div>
     <div class="text-center submit-button">
         <a href="#">
-            <button type="button" class="btn btn-lg btn-success" id="submit">
+            <button type="button" class="btn btn-success btn-lg" id="submit" data-toggle="modal" data-target="#best-match-modal">
                 <p><i class="fa fa-check-square"></i>Submit Answers</p>
             </button>
         </a>
@@ -148,23 +148,49 @@
             </button>
         </a>
     </div>
+    <!-- ****************************************************************************************** -->
+    <!-- Modal -->
+    <div class="modal fade" id="best-match-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Your best match is...</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center" id="bestMatch-name"></div>
+                    <div class="text-center" id="bestMatch-photo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****************************************************************************************** -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    $("#submit").on("click", function() {
+    $(function(){
+        $("#name").focus();
+    });
+    
+    $("#submit").on("click", function(e) {
+        e.preventDefault();
         var newUser = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
             scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
         }
 
-        $.post("http://localhost:8080/api/friends", newUser).done(function(data) {
-            	console.log(data);
+        $.post("http://localhost:8080/api/friends", newUser).done(function(bestMatch) {
+            console.log(bestMatch);
+            $("#bestMatch-name").html("<h2>" + bestMatch.name + "</h2>");
+            $("#bestMatch-photo").html("<img src='" + bestMatch.photo + "' alt='best match photo'>");
         });
 
         $("#name").val("");
         $("#photo").val("");
-        // $(".q").val("");
+        $(".q").val("");
         $("#name").focus();
     });
     </script>

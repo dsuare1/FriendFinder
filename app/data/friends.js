@@ -1,7 +1,7 @@
 var friends = [
 	{
-    	"name": "Derrick",
-    	"photo": "https://pbs.twimg.com/profile_images/584082765747888128/uPjWgpcq.jpg",
+    	"name": "Johnny Knoxville",
+    	"photo": "http://3.bp.blogspot.com/_2VS7tUTDFhw/TO1FXLzRC3I/AAAAAAAAAC4/LRyT2wd4WZ0/s1600/johnny_knoxville-1024x768-132574.jpeg",
     	"scores": [
 	        3,
 	        4,
@@ -17,7 +17,7 @@ var friends = [
 	},
 	{
 		"name": "Lindsay Lohan",
-		"photo": "http://img2.timeinc.net/people/i/2013/news/130121/lindsay-lohan-300.jpg",
+		"photo": "http://www.evilbeetgossip.com/wp-content/uploads/2015/01/lindsay-lohan2.jpg",
 		"scores": [
 			4,
 			2,
@@ -33,7 +33,7 @@ var friends = [
 	},
 	{
 		"name": "Jeff Goldblum",
-		"photo": "http://images2.fanpop.com/image/photos/14000000/Jeff-Goldblum-jeff-goldblum-14035249-360-451.jpg",
+		"photo": "http://cdn1.actionmovieaddict.com/sites/movieroomreviews.com/files/imagecache/story_header/images/jurass-park-4-world-jeff-goldblum.jpg",
 		"scores": [
 			3,
 			4,
@@ -49,7 +49,7 @@ var friends = [
 	},
 	{
 		"name": "Joan Rivers",
-		"photo": "https://pbs.twimg.com/profile_images/537736236132474880/n0ugt0fg.jpeg",
+		"photo": "http://www.advocate.com/sites/advocate.com/files/2014/05/22/JoanRiversMain.jpg",
 		"scores": [
 			5,
 			3,
@@ -65,7 +65,7 @@ var friends = [
 	},
 	{
 		"name": "Nicholas Cage",
-		"photo": "https://pmcdeadline2.files.wordpress.com/2016/02/nicolas-cage.jpg",
+		"photo": "https://20thcenturyflicks.files.wordpress.com/2015/07/con-air-nicolas-cage-2_400.jpg",
 		"scores": [
 			2,
 			5,
@@ -81,7 +81,7 @@ var friends = [
 	},
 	{
 		"name": "Kathy Griffin",
-		"photo": "http://media.lehighvalleylive.com/entertainment-general_impact/photo/kathy-griffin-256c88ba931e142c.jpg",
+		"photo": "http://static.thefrisky.com/uploads/2013/01/03/Kathy-Griffin-010313-400x300.jpg",
 		"scores": [
 			4,
 			2,
@@ -97,7 +97,7 @@ var friends = [
 	},
 	{
 		"name": "Danny McBride",
-		"photo": "http://waytofamous.com/images/danny-mcbride-04.jpg",
+		"photo": "http://cdn2.holytaco.com/wp-content/uploads/2012/02/kenny_powers_wig.jpg",
 		"scores": [
 			2,
 			3,
@@ -113,7 +113,7 @@ var friends = [
 	},
 	{
 		"name": "David Hasselhoff",
-		"photo": "http://www.gannett-cdn.com/-mm-/a8f394c27827368ea4a214eb37abe26bbd4c314a/c=0-11-1600-2142&r=537&c=0-0-534-712/local/-/media/USATODAY/USATODAY/2014/04/01//1396360940000-XXX-D-HOT-PAGE-11-HASSELLHO.jpg",
+		"photo": "http://static.socialitelife.com/uploads/2009/05/davidhasselhoff-drunk-photos-05032009-05-400x300.jpg",
 		"scores": [
 			5,
 			4,
@@ -129,7 +129,7 @@ var friends = [
 	},
 	{
 		"name": "Adam Sandler",
-		"photo": "http://www.howmuchmoneytheymake.com/wp-content/uploads/2013/09/adam-sandler-net-worth.png",
+		"photo": "http://www.multichannel.com/sites/default/files/public/styles/blog_content/public/Adam-Sandler.jpg?itok=FA5m_Owf",
 		"scores": [
 			2,
 			5,
@@ -145,7 +145,7 @@ var friends = [
 	},
 	{
 		"name": "Dolly Parton",
-		"photo": "http://vignette2.wikia.nocookie.net/friends/images/2/24/Dolly-parton-6892.jpg/revision/latest?cb=20111216204727",
+		"photo": "http://dollypartonfans.co.uk/wordpress/wp-content/uploads/2013/02/Dolly_Parton400x300.jpg",
 		"scores": [
 			5,
 			3,
