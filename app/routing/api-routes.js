@@ -23,9 +23,9 @@ var api = function() {
                     }
                     console.log("totDiffs: " + totDiffs);
 
+                    var lowest = totDiffs[0];
                     for (var i = 0; i < totDiffs.length; i++) {
                     	console.log("find lowest");
-                        var lowest = totDiffs[0];
                         if (totDiffs[i] < lowest) {
                             lowest = totDiffs[i];
                         }
