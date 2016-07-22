@@ -4,7 +4,6 @@ var path = require("path");
 var htmlRoutes = require("./app/routing/html-routes.js");
 var apiRoutes = require("./app/routing/api-routes.js");
 var friends = require("./app/data/friends.js");
-// var apiRoutes = require("./app/routing/api-routes2.js");
 
 var app = express();
 var PORT = 8080;
@@ -14,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-// // used to serve the static files (style.css, imgs, etc.)
-// app.use("/assets", express.static(__dirname + "/assets"));
+// used to serve the static files (style.css, imgs, etc.)
+app.use("/app/public", express.static(__dirname + "/app/public"));
 
 // ****************************************************
 // html view routing
@@ -26,9 +25,9 @@ var api = new apiRoutes();
 html.home(app, path);
 html.survey(app, path);
 
-// // ****************************************************
-// // api routing
-// // ****************************************************
+// ****************************************************
+// api routing
+// ****************************************************
 api.jsonFriends(app, friends);
 api.postUser(app, friends);
 

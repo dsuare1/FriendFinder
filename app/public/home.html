@@ -5,22 +5,59 @@
     <title>FriendFinder :: Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="app/public/style.css" type="text/css">
 </head>
 
 <body>
-	<div class="text-center">
-    	<h1>Welcome to Friend Finder!</h1>
+    <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="trigger">
+                <div class="intro-text">
+                    <h1><strong>Welcome to FriendFinder!</strong></h1>
+                </div>
+                <div class="survey-button">Take the <a href="/survey">Survey</a>;
+                    <br>find your closest match...
+                </div>
+            </div>
+            <div class="item active">
+                <img src="app/public/img/img0.jpeg" alt="Friend's Feet" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="app/public/img/img1.jpeg" alt="Friend's Feet" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="app/public/img/img2.jpeg" alt="Friend's Feet" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="app/public/img/img3.jpeg" alt="Friend's Feet" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="app/public/img/img4.jpeg" alt="Friend's Feet" class="img-responsive">
+            </div>
+        </div>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
     </div>
-    <div class="text-center">
-    	<a href="/survey">
-    		<button type="button" class="btn btn-md btn-primary">
-    			<p><i class="fa fa-question-circle-o"></i>Take the Survey</p>
-    		</button>
-    	</a>
-    </div>
-
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(".carousel").carousel({
+        interval: 5500,
+        pause: false
+    });
+    </script>
 </body>
 
 </html>
