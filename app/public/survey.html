@@ -215,7 +215,9 @@
                 scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
             }
 
-            $.post("http://localhost:" + process.env.PORT + "/api/friends", newUser).done(function(bestMatch) {
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + "/api/friends", newUser).done(function(bestMatch) {
                 console.log(bestMatch);
                 $("#bestMatch-name").html("<h2 style='font-size: 4em;'>" + bestMatch.name + "</h2>");
                 $("#bestMatch-photo").html("<img src='" + bestMatch.photo + "' alt='best match photo'>");
