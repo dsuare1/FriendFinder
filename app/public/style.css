@@ -37,16 +37,19 @@ a:active {
     position: absolute;
     margin: 15% 0px 15% 35%;
     /*border: 5px solid white;*/
+    /*transition: all 10s ease-in-out;*/
 }
 
 .intro-text {
+	position: relative;
     display: inline-block;
     width: 95%;
     color: #fff;
     border-top: 1px solid white;
     border-left: 1px solid white;
     padding: 20px;
-    transition: transform 300ms ease-in-out;
+    /*transform: translate(25px, 25px);*/
+    transition: transform 500ms ease-in-out;
 }
 
 .intro-text h1 {
@@ -55,6 +58,7 @@ a:active {
 
 .survey-button {
     /*z-index: 1;*/
+    position: relative;
     display: inline-block;
     margin: 100px 0px 0px 215px;
     font-size: 2.5em;
@@ -63,12 +67,9 @@ a:active {
     color: white;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
+    /*transform: translate(-25px, -25px);*/
+	transition: transform 500ms ease-in-out;
 }
-
-.trigger:hover + .intro-text {
-    transform: translate(20px, 20px);
-}
-
 
 /*****************************************/
 /* Survey Page */
@@ -167,4 +168,39 @@ h4 {
 	text-align: center;
 	color: #2ecc71;
 	font-weight: bold;
+}
+
+/********************************************************/
+/* footer */
+/********************************************************/
+.copyright {
+	display: inline-block;
+	margin-right: 20px;
+	color: white;
+}
+
+.github-link {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.api-friends-list {
+	display: inline-block;
+}
+
+/********************************************************/
+/* hover effect */
+/********************************************************/
+.trigger:hover .intro-text {
+	/*position: relative;
+	top: 20px;
+	left: 20px;*/
+	transform: translate(25px, 25px);
+}
+
+.trigger:hover .survey-button {
+	/*position: relative;
+	top: -20px;
+	left: -20px;*/
+	transform: translate(-25px, -25px);
 }
